@@ -59,7 +59,7 @@ module.exports = (number, options) => {
 		throw new TypeError(`Expected a finite number, got ${typeof number}: ${number}`);
 	}
 
-	options = Object.assign({bits: false, binary: true}, options);
+	options = Object.assign({bits: false, binary: false}, options);
 	const UNITS = options.bits ? BIT_UNITS : options.binary ? BIBYTE_UNITS : BYTE_UNITS;
 
 	if (options.signed && number === 0) {
